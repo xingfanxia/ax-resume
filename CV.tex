@@ -25,7 +25,7 @@
 \newcommand{\CVAuthor}{Xingfan Xia}
 \newcommand{\CVTitle}{Xingfan's CV}
 \newcommand{\CVNote}{CV compiled on {\today}}
-\newcommand{\CVWebpage}{https://xiax.xyz}
+\newcommand{\CVWebpage}{https://ax0x.ai}
 
 % PDF settings and properties.
 \hypersetup{
@@ -74,6 +74,20 @@ breaklinks}
 \end{SubTitle}
 
 \begin{Body}
+%%%%%%%%%%%%%
+%% PROFILE %%
+%%%%%%%%%%%%%
+
+\Section
+{Profile}
+{Profile}
+{PDF:Profile}
+
+\Entry
+ML/AI engineer and startup CTO with 7+ years building production ML systems --- from on-device models at Apple to multi-agent AI orchestration at scale. Currently shipping AI-powered automation via \textbf{Agentic AI Development} (Claude Code, 80B+ tokens). Building evaluation pipelines and multi-agent orchestration methodology for enterprise AI.
+
+\BigGap
+
 %%%%%%%%%%%%%%%%%%%%%
 %% WORK EXPERIENCE %%
 %%%%%%%%%%%%%%%%%%%%%
@@ -85,7 +99,7 @@ Experience}
 {PDF:WorkExperience}
 
 \Entry
-\href{https://computelabs.com/}
+\href{https://computelabs.ai/}
 {\textbf{Compute Labs}},
 Remote, Redmond, WA
 
@@ -97,28 +111,13 @@ Co-Founder and CTO
 Present
 \begin{Detail}
 \SubBulletItem
-\textbf{Overseeing the entire technological vision and strategy of the company, ensuring alignment with business goals and market demands.}
+\textbf{Architecting multi-agent AI systems for GPU infrastructure underwriting, building LLM-powered automation that reduced deal evaluation from 2 weeks to under 10 minutes.}
 \SubBulletItem
-Managing and leading the engineering team, including hiring, mentoring, and developing top-tier talent.
+Architected multi-model AI orchestration layer (Claude, Gemini, OpenAI) powering 11 parallel domain-expert sub-agents for automated deal evaluation, with three-layer pipeline: Gemini extraction, Claude Opus analysis, and multi-model ensemble for report generation.
 \SubBulletItem
-Spearheading product launches, from conceptualization to market release, ensuring technical excellence and market fit.
-\end{Detail}
-
-\BigGap
-\Entry
-\href{https://www.duckie.ai/}
-{\textbf{Duckie (YC W24)}},
-Remote, Redmond, WA
-
-\Gap
-\BulletItem
-Founding Engineer
-\hfill
-\DatestampYM{2024}{7} --
-\DatestampYM{2024}{8}
-\begin{Detail}
+Built state machine workflow engine orchestrating AI agent pipelines processing \$1.3B+ in GPU deals, with prompt experimentation system for continuous model optimization.
 \SubBulletItem
-\textbf{Engineering Lead working on the revolution of T2 technical support.}
+Built GPU market intelligence platform using multi-model LLM extraction (GPT/Claude/Gemini) to process 3,200+ data points from 45+ providers, with 4-stage ML pipeline including adaptive outlier detection and financial depreciation modeling.
 \end{Detail}
 
 \BigGap
@@ -129,23 +128,17 @@ Redmond, WA
 
 \Gap
 \BulletItem
-Software Engineer
+Senior Engineer - ML Data Platform
 \hfill
 \DatestampYM{2022}{4} --
-Present
+\DatestampYM{2024}{6}
 \begin{Detail}
 \SubBulletItem
-\textbf{Building the next-gen storage infrastructure for large-scale distributed systems with billions of rows and terabytes of data, improving the performance of AIML and other big data analytics applications.}
-\SubBulletItem \textbf{Tech Stack: Java, Python, Spark, Iceberg, AWS Services(S3, CodePipeline, CodeBuild, Cloudwatch, etc.)}
+\textbf{Building petabyte-scale query engine powering ML training data pipelines and feature stores, enabling data scientists to prepare, transform, and materialize datasets for model training at AWS scale.}
 \SubBulletItem
-Implemented CTAS(Create Table As Select) feature for Iceberg Tables in Athena query engine. Released Iceberg Table GA Preview RE:INVENT 2022 and millions of CTAS queries being executed since the release.
+Designed and shipped feature materialization system enabling ML teams to version, transform, and snapshot training datasets at petabyte scale with automated schema evolution for iterative model development. Released at AWS RE:INVENT 2022.
 \SubBulletItem
-Overhauled the existing Hive JSON Serde library, improved the query execution performance by up to 30\%, and fixed non deterministic query results, reduced related ops tickets by 60\%.
-\SubBulletItem
-Implemented a virtualized table connector on top of the Iceberg table connector so users can leverage the performance of the Iceberg table engine to access other table formats with limited scalability. 
-Improved the query execution speed of these table formats by approximately 40\%, avoided congestion, and is projected to save 4 million in hardware costs per year.
-\SubBulletItem
-Worked on a cross-team endeavor to overhaul the query routing logic from the Athena engine to multiple external services, reduced excessive retry behaviors, and reduced service congestion by up to 32\%
+Built high-throughput ML data processing pipeline optimizing feature extraction workflows, improving end-to-end throughput by 30\% and reducing data pipeline failures by 60\%.
 \end{Detail}
 
 \BigGap
@@ -156,24 +149,17 @@ Cupertino, CA
 
 \Gap
 \BulletItem
-Machine Learning Engineer
+Machine Learning Engineer - Siri AI Platform
 \hfill
 \DatestampYM{2020}{8} --
 \DatestampYM{2022}{4}
 \begin{Detail}
 \SubBulletItem
-\textbf{Improving users' experience with proactive AI assistant on iOS, macOS, watchOS, tvOS.}
-\SubBulletItem \textbf{Tech Stack: Python, Objective-C, Sklearn Kit, Pytorch, Airflow, Hive, Presto, Spark}
+\textbf{Building on-device ML models and AI-powered features for Siri proactive assistant across iOS, macOS, watchOS, and tvOS.}
 \SubBulletItem
-Implemented an on-device user profiling framework that consists of several models to predict users' overall interest and preferences as an upstream service that provides signals to downstream consumers like Apple Map, and Apple News.
+Implemented on-device user profiling framework with multiple ML models predicting user interests and preferences, serving as upstream signal provider for Apple Maps and Apple News recommendation systems.
 \SubBulletItem
-Improved the on-device location model with 4 times of training data and better engineered aggregated features, increased user engagement rate by 9\%. Also redesigned the model inference logic on device to reduce latency by up to 22\%.
-\SubBulletItem
-Overhauled the topic prediction model leveraging transformer-based model BERT, increased topic prediction accuracy by 14\% and user engagement rate by 11\%. Also improved the inference pipeline to reduce latency by up to 12\%.
-\SubBulletItem
-Developed an automatic machine learning pipeline that retrains models with data source updates, launches A/B testing experiments, and deploys new models if a specified improvement is observed, saving engineering hours across the team.
-\SubBulletItem
-Worked on action prediction service which predicts user intention at a particular time and location by aggregating various signals from multiple models input which is used in Siri Suggestions and Siri Shortcuts.
+Overhauled topic prediction model using transformer-based BERT architecture, increasing prediction accuracy by 14\% and user engagement by 11\%. Optimized inference pipeline to reduce on-device latency by 12\%.
 \end{Detail}
 
 \BigGap
@@ -184,24 +170,17 @@ San Francisco, CA
 
 \Gap
 \BulletItem
-Software Engineer
+Machine Learning Engineer - Trust \& Safety
 \hfill
 \DatestampYM{2019}{1} --
 \DatestampYM{2020}{8}
 \begin{Detail}
 \SubBulletItem
-\textbf{Fighting financial fraud with machine learning models and rule-based engine.}
-\SubBulletItem \textbf{Tech Stack: Python, Java, Scala, Sklearn Kit, Airflow, Hive, Presto, Spark}
+\textbf{Building ML-powered fraud detection and trust \& safety systems using XGBoost, logistic regression, and real-time inference engines.}
 \SubBulletItem
-Developed various models(XGBoost and logistic regression) to tackle the fake review problem at Airbnb, cutting the volume of fake reviews to 1\% of the peak volume and preventing 2 million losses. Also deployed it with a new inference mechanism, improve inference performance by 30\%.
+Developed ML models (XGBoost and logistic regression) for fake review detection, cutting fraudulent reviews to 1\% of peak volume and preventing \$2M in losses. Deployed with optimized inference mechanism improving performance by 30\%.
 \SubBulletItem
-Trained a logistic regression model to produce a comprehensive risk score with Sklearn, evaluating the overall risk of users on Airbnb, especially on Airbnb hosts, similar to Alipay's Zhima/Seasame score.
-\SubBulletItem
-Rolled out a new policy that delays the payout of risky Airbnb hosts, prevented 60\% of fraudulent payouts being made and hence in an estimated 10 million in annual savings.
-\SubBulletItem
-Built a Java microservice that provides downstream services with consolidated risk signals using Redis, Hive, and Kafka.
-\SubBulletItem
-Designed and Implemented a scoring Java service that produces risk scores of certain events and scenarios supporting multiple downstream consumers using Redis, Hive, and Kafka.
+Architected real-time ML inference microservice with Kafka streams and Redis caching for sub-100ms risk signals across multiple downstream consumers.
 \end{Detail}
 
 % \BigGap
@@ -397,15 +376,15 @@ Graduated \DatestampYM{2018}{06}
 {PDF:Technical Skills}
 
 \BulletItem
-Programming Languages: Proficiency in Python, Java, Golang, Javascript, Scala, Objective-C
+Programming Languages: Proficiency in Python, Java, Golang, TypeScript, Scala, Objective-C
 
 \Gap
 \BulletItem
-Experienced AWS Services: Athena, S3, SQS, EC2, Lambda, API Gateway, Auto Scaling Group, Cloudfront, Route 53, CodePipeline, CodeBuild, CodeDeploy, Kinesis
+AI \& Machine Learning: LLM APIs (Claude, GPT, Gemini), Multi-Agent Systems, Prompt Engineering, PyTorch, Scikit-learn, XGBoost, BERT, On-Device ML, MLOps, Claude Code, Cursor
 
 \Gap
 \BulletItem
-Machine Learning \& Data Engineering: Scikit Learn, OpenCV, Pytorch, Matplotlib, Scipy, Numpy, Pandas, ELK, Apache Iceberg, Apache Spark, Apache Kafka, Airflow
+Infrastructure \& Data: FastAPI, Next.js, React, GCP Cloud Run, Spark, Iceberg, Kafka, Airflow, AWS (Athena, S3, Lambda, EC2)
 \let\clearpage\relax
 
 \end{Body}
